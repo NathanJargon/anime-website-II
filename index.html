@@ -36,20 +36,18 @@
         }
     }
 
-    /* Initial styles for text inside the navbar */
     .navbar {
-        background-color: #fff; /* White background */
-        transition: background-color 0.5s ease; /* Smooth background color transition */
+        background-color: #fff; 
+        transition: background-color 0.5s ease;
     }
 
     .navbar .navbar-brand, .navbar .nav-link, .navbar .btn {
-        color: black; /* Black text color */
-        transition: color 0.5s ease; /* Smooth text color transition */
+        color: black;
+        transition: color 0.5s ease;
     }
 
-    /* Updated styles when scrolling down or at a specific height */
     .navbar.navbar-scrolled {
-        background-color: rgba(225, 225, 225, 0.7); /* Black background */
+        background-color: rgba(215, 215, 215, 0.7);
     }
 
 
@@ -67,11 +65,11 @@
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#">Donate</a>
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown
+            News
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="#">Action</a>
@@ -79,9 +77,6 @@
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Something else here</a>
             </div>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
         </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -245,7 +240,7 @@
 
 
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) { // Adjust this value to determine when the navbar becomes fully opaque
+            if (window.scrollY > 50) { 
                 navbar.classList.add('navbar-scrolled');
             } else {
                 navbar.classList.remove('navbar-scrolled');
@@ -255,27 +250,19 @@
 
     <!-- Progress Bar -->
     <script>
-        // Get a reference to the progress bar element
         const progressBar = document.querySelector('.progress-bar');
-
-        // Function to update the progress bar width based on scroll position
         function updateProgressBar() {
             const scrollPosition = window.scrollY;
             const windowHeight = window.innerHeight;
             const documentHeight = document.documentElement.scrollHeight;
             const maxScroll = documentHeight - windowHeight;
 
-            // Calculate the percentage of scroll progress
             const scrollPercentage = (scrollPosition / maxScroll) * 100;
 
-            // Update the width of the progress bar
             progressBar.style.width = scrollPercentage + '%';
 
-            // Update the "aria-valuenow" attribute
             progressBar.setAttribute('aria-valuenow', scrollPercentage);
         }
-
-        // Listen for scroll events and update the progress bar
         window.addEventListener('scroll', updateProgressBar);
     </script>
 </body>
