@@ -24,7 +24,7 @@ function signIn() {
             // Signed in
             const user = userCredential.user;
             //console.log(user);
-            window.location.href = 'index.html'
+            window.location.href = 'main.html'
         })
         .catch((error) => {
             const errorMessage = "Invalid credentials.";
@@ -43,7 +43,7 @@ function signUp() {
         .then((userCredential) => {
             // Signed up
             const user = userCredential.user;
-            window.location.href = 'sign-in.html'
+            window.location.href = 'index.html'
         })
         .catch((error) => {
             const errorMessage = "Invalid credentials.";
