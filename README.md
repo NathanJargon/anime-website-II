@@ -8,9 +8,7 @@ A simple static website built with Bootstrap.
 
 - [Description](#description)
 - [Features](#features)
-- [Demo](#demo)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
 
