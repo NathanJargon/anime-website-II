@@ -70,6 +70,7 @@ function signInWithGoogle() {
             // Signed in with Google
             const user = userCredential.user;
             //console.log(user);
+            window.location.href = 'main.html'
         })
         .catch((error) => {
             const errorCode = error.code;
