@@ -11,6 +11,7 @@ const firebaseConfig = {
   // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
+
 const auth = firebase.auth();
 
 function signIn() {
@@ -78,3 +79,15 @@ function signInWithGoogle() {
             //console.error(errorMessage);
         });
 }
+
+function userExists() {
+    const auth = firebase.auth();
+    
+    auth.onAuthStateChanged((user) => {
+        if (!user) {
+        // User is not logged in, redirect to index.html
+        window.location.href = 'index.html';
+        }
+    });
+}
+  
